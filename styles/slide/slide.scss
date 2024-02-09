@@ -1,0 +1,16 @@
+/* Set slide */
+.slide{
+    height: 80vh;
+    max-height: 800px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    z-index: -2;
+}
+
+@media (max-width:765px) {
+    .slide{
+        max-height: 550px;
+    }
+    
+}

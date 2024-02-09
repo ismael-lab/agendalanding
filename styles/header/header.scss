@@ -1,0 +1,33 @@
+@import '../setColors.scss';
+
+.header{
+    background: white;
+    height: 100px;
+}
+
+.logo{
+    max-width: 200px;
+}
+
+.navbar-toggler{
+    border: none !important;
+}
+
+.navbar-toggler:focus{
+    box-shadow:none !important;
+}
+
+.nav-border{ 
+    border-right: solid 3px $tertiary;
+}
+
+.navbar-collapse{
+    background: white;
+    border-radius: 20px;
+}
+
+@media (max-width:765px) {
+    .nav-border{ 
+        border-right: none;
+    }    
+}
