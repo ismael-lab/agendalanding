@@ -1,12 +1,12 @@
 @import '../setColors.scss';
 
 .header{
-    background: white;
-    height: 100px;
+    background: $primary;
+    height: 80px;
 }
 
 .logo{
-    max-width: 200px;
+    max-width: 100px;
 }
 
 .navbar-toggler{
@@ -16,13 +16,9 @@
 .navbar-toggler:focus{
     box-shadow:none !important;
 }
-
-.nav-border{ 
-    border-right: solid 3px $tertiary;
-}
-
+ 
 .navbar-collapse{
-    background: white;
+    background: $primary;
     border-radius: 20px;
 }
 
