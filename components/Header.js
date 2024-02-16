@@ -29,7 +29,7 @@ export default function Header (){
 
     return(
         <>
-        <nav className="navbar navbar-expand-lg header fixed-top">
+        <nav className="navbar navbar-expand-lg header">
             <div className="container">
                 <Link  href={'/'}><Image src={Logo} className='logo'></Image></Link>
                 

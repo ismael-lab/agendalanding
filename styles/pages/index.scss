@@ -1,3 +1,61 @@
+/* Banner */
+.container-banner{
+    display: grid;
+    place-items: center;
+    background-image:url('../../public/images/bg1.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 520px;
+}
+
+
+
+.header1{
+    color: white;
+    font-weight: 700;
+    font-size: 64pt;
+}
+
+.subtitle-header{
+    font-size: 24pt;
+    margin-top: 3ch;
+    text-align:center
+}
+
+/* Text */
+.subtitle{
+    color: $primary;
+    font-weight: 500;
+    font-size: 24pt;
+}
+
+.subtitle-white{
+    color: white;
+    font-weight: 500;
+    font-size: 24pt;
+    text-align:center ;
+}
+
+.title-table{
+    align-items: center;
+    text-align:center;
+}
+
+.title-body{
+    color: $primary;
+    font-weight: 700;
+
+}
+
+.text-comment{
+    color: $purple1;
+    font-size: 12pt;
+}
+
+.text-autor{
+    color: $purple5;
+}
+
 /* Slide */
 .slider-header .swiper-pagination-bullet{
     border-color: white;
@@ -71,7 +129,8 @@
 }
 
 .section-cta_image{
-    background-image: url(../../public/images/cta/junte-se.jpg);
+    background-color: $purple4;
+    height:auto;
 }
 
 .section-cta_content{
@@ -94,7 +153,12 @@
 }
 
 .section-teams_header{
-    max-width: 55vw;
+    display: grid;
+    place-items: center;
+    background-image:url('../../public/images/bg2.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 280px;
 }
 
 .section-cta_inscription{

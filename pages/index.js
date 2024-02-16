@@ -2,28 +2,31 @@ import Image from "next/image";
 import Slider from "../components/index/slider/Slider";
 import SliderFlex from "../components/index/slider/Slider-flex";
 import { Swiper, SwiperSlide } from "swiper/react";
-import CreaLight from "../public/images/brand/creajovem-light-color-green.svg";
-import LogoCreaEntregando from "../public/images/brand/crea-estregando-valor-light.svg";
-import LogoCreaEntregandoDark from "../public/images/brand/crea-estregando-valor-dark.svg";
 import Button from "../components/buttons/button";
 import BoxTeam from "../components/index/box-teams/box-team";
-import Team1 from "../public/images/teams/capacitacao.svg";
-import Team2 from "../public/images/teams/empreendedorismo.svg";
-import Team3 from "../public/images/teams/legislacao.svg";
-import Team4 from "../public/images/teams/inovacao.svg";
-import Team5 from "../public/images/teams/entidades.svg";
-import Team6 from "../public/images/teams/apoio.svg";
+import Logo from '../public/images/logos/Logo_purple.svg'
+import usabilidade1 from "../public/images/index/usabilidade_1.svg";
+import Team2 from "../public/images/index/usabilidade_2.svg";
+import Team3 from "../public/images/index/usabilidade_3.svg";
+import Team4 from "../public/images/index/usabilidade_4.svg";
+import LogoEmpresa1 from "../public/images/logos/Windows_10_Logo.png";
+import LogoEmpresa2 from "../public/images/logos/Amazon_logo.png";
+import LogoEmpresa3 from "../public/images/logos/Coca-Cola_logo.png";
+import LogoEmpresa4 from "../public/images/logos/FedEx_Express.png";
+import LogoEmpresa5 from "../public/images/logos/Google_2015_logo.png";
+import LogoEmpresa6 from "../public/images/logos/Spotify_logo.png";
+import Team5 from "../public/images/MacBook.png";
+import Team6 from "../public/images/teams/aspas.svg";
 import BoxProduct from "../components/products/box-product";
-import LogoSebrae from "../public/images/logos/sebrae.svg";
-import LogoCredcrea from "../public/images/logos/credcrea.png";
+import LogoSebrae from "../public/images/img1.png";
+import LogoCredcrea from "../public/images/teams/aspas.svg";
 import LogoAcate from "../public/images/logos/acate.png";
-import LogoInova from "../public/images/brand/inovacrea.svg";
-import LogoCrea from "../public/images/brand/crea.svg";
 import LogosSlide from "../public/images/brand/logos-slide.svg";
 import axios from "axios";
 import check from "../public/images/check.png";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+
 
 export default function Home() {
   const [modal, setModal] = useState();
@@ -69,198 +72,136 @@ export default function Home() {
   const closeModal = () => {
     modal.hide();
   };
-
+  
   return (
     <>
-      <Slider clase="slider-header first-section">
-        <SwiperSlide>
-          <section className="slide slide1 d-flex align-items-center">
-            <div className="container">
-              <div className="slide-content d-grid align-items-end gap-5 gap-md-0 text-responsive">
-                <div className="mb-5">
-                  <Image
-                    src={CreaLight}
-                    className="slide-img_creajoven mb-3"
-                    alt="Crea Jovem"
-                  ></Image>
-                  <p className="font-mont display-5 fw-bold text-white mb-3">
-                    Oportunidades que impulsionam carreiras!
-                  </p>
+      <div className="container-banner">
+        <div><p className="header1">Para reservar espaços</p>
+         <p className="text-white subtitle-header">
+            Do {" "}
+            <span className="text-marked">
+                vago
+            </span>{" "}
+            ao{" "}
+            <span className="text-marked">
+                ocupado
+            </span>{" "} 
+            em um clique: agende conosco!
+         </p>
+        </div>
+      </div>
 
-                  <div>
-                    <Image
-                      src={LogosSlide}
-                      className="slide-img_logos mb-5 mb-md-0"
-                    ></Image>
-                  </div>
-                </div>
-                <div className="mt-5 mt-md-0">
-                  <Button
-                    type="button-primary"
-                    link={"/times"}
-                    text="Conheça nossos times AAAAAAAAAAA"
-                  ></Button>
-                </div>
-              </div>
-            </div>
-          </section>
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <section className="slide slide2 d-flex align-items-center">
-            <div className="container">
-              <div className="slide-content d-grid align-items-end gap-5 gap-md-0 text-responsive">
-                <div className="mb-5">
-                  <p className="font-mont display-5 fw-bold text-white mb-3">
-                    Produtos e serviços
-                  </p>
-                  <p className="subtitle text-white">
-                    Oportunidades para impulsionar sua carreira e criar
-                    conexões.
-                  </p>
-                  <div>
-                    <Image
-                      src={LogosSlide}
-                      className="slide-img_logos mb-5 mb-md-0"
-                    ></Image>
-                  </div>
-                </div>
-                <div className="mt-5 mt-md-0">
-                  <Button
-                    type="button-primary"
-                    link={"/#produtos"}
-                    text="Conheça nossos produtos"
-                  ></Button>
-                </div>
-              </div>
-            </div>
-          </section>
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <section className="slide slide3 d-flex align-items-center">
-            <div className="container">
-              <div className="slide-content d-grid align-items-end gap-5 gap-md-0 text-responsive">
-                <div className="mb-5">
-                  <p className="font-mont display-5 fw-bold text-white mb-3">
-                    Times e áreas
-                  </p>
-                  <p className="subtitle text-white">
-                    Oportunidades para impulsionar sua carreira e criar
-                    conexões.
-                  </p>
-                  <div>
-                    <Image
-                      src={LogosSlide}
-                      className="slide-img_logos mb-5 mb-md-0"
-                    ></Image>
-                  </div>
-                </div>
-                <div className="mt-5 mt-md-0">
-                  <Button
-                    type="button-primary"
-                    link={"/times"}
-                    text="Conheça nossos times"
-                  ></Button>
-                </div>
-              </div>
-            </div>
-          </section>
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <section className="slide slide4 d-flex align-items-center">
-            <div className="container">
-              <div className="slide-content d-grid align-items-end gap-5 gap-md-0 text-responsive"></div>
-            </div>
-          </section>
-        </SwiperSlide>
-      </Slider>
-
-      <section className="container py-3 my-5 about-program">
-        <div className="d-flex flex-column-reverse flex-md-row gap-5 justify-content-center align-items-center h-100">
+      <section className="container py-3 my-5">
+        <div className="d-flex flex-column-reverse flex-md-row gap-5 align-items-center h-100">
           <div className="w-100">
-            <video src={"/video/creasc.mp4"} className="video" controls></video>
+            <div>
+            <p className="subtitle">
+            Por que reservar no <span><Image src={Logo} className='logo'></Image></span> ?
+            </p>
+            
+            </div>
+            <p>O Tahvago foi projetado para proporcionar uma experiência intuitiva e eficiente no agendamento de espaços. 
+              Com um design amigável e funcionalidades acessíveis, o processo de reserva é simplificado, permitindo que os 
+              usuários reservem facilmente espaços que atendam às suas necessidades. 
+              </p>
+              <p>A ferramenta oferece flexibilidade, permitindo ajustes de detalhes como horário, número de convidados e 
+              visualização detalhada do espaço. Isso garante uma experiência de reserva adaptada às necessidades individuais de cada usuário.</p>
           </div>
-          <div className="w-100">
-            <p className="title-2 font-faster_italic">
-              <span className="title-marked">Programa</span> CREA Jovem-sc
-            </p>
-            <p>
-              O Programa CREA JOVEM-SC tem o objetivo de implementar em âmbito
-              estadual ações direcionadas a capacitação dos profissionais
-              recém-graduados e com até cinco anos de formação nas áreas
-              abrangidas pelo Sistema Confea/Crea, possibilitando-lhes{" "}
-              <span className="text-marked">
-                orientação para ingresso no mercado de trabalho,
-              </span>{" "}
-              além de fomentar a participação nas atividades do Sistema e nas
-              entidades de classe.
-            </p>
-            <div className="mt-4 mt-md-5">
-              <Link
-                href="pdf/Regras-CREA-Jovem-SC-2023.pdf"
-                target="blank"
-                className={`button button-primary`}
-              >
-                <button>
-                  <p>Acessar regulamento</p>
-                </button>
-              </Link>
-            </div>
+          <div className="w-100 d-flex align-items-center flex-column">
+          <Image src={LogoSebrae} alt="Sebrae" ></Image>
           </div>
         </div>
       </section>
 
-      <section className="d-md-flex py-md-5 justify-content-center">
-        <div className="box-skew">
-          <div className="content-left">
-            <p className="title-3">
-              <span className="title-marked2">Benefícios</span>
-            </p>
-            <p>
-              Estreitar as relações do Crea-SC com os jovens profissionais,
-              contribuindo na sua <span className="fw-bold">qualificação</span>,
-              estabelecendo{" "}
-              <span className="fw-bold">
-                parcerias, convênios e apoiando movimentos
-              </span>{" "}
-              inovadores e empreendedores.
-            </p>
-          </div>
-          <div className="box-skew_left"></div>
-        </div>
-
-        <div className="box-skew mt-3 mt-md-5">
-          <div className="content-right">
-            <p className="title-3">
-              <span className="title-marked2">Para quem</span> se destina?
-            </p>
-            <p>
-              Para{" "}
-              <span className="fw-bold">profissionais recém-graduados</span> e
-              com até <span className="fw-bold">cinco anos de formação</span>{" "}
-              nas áreas abrangidas pelo Sistema Confea/Crea, com registro
-              regular no CREA-SC.
-            </p>
-          </div>
-          <div className="box-skew_right"></div>
+      <section className="container py-3 my-5">
+        <div >
+          <p className="subtitle">
+            Por que reservar no <span><Image src={Logo} className='logo'></Image></span> ?
+          </p>
+          <table className="py-5 justify-content-center title-table">
+            <tr>
+              <th><Image src={usabilidade1} className='Logo'></Image></th>
+              <th><Image src={Team2} className='Logo'></Image> </th>
+              <th><Image src={Team3} className='Logo'></Image></th>
+              <th><Image src={Team4} className='Logo'></Image> </th>
+            </tr>
+            <tr>
+              <th><p className="title-body">Cadastre-se</p></th>
+              <th><p className="title-body">Procure</p></th>
+              <th><p className="title-body">Faça a reserva</p></th>
+              <th><p className="title-body">Tudo pronto</p></th>
+            </tr>
+            <tr>
+              <th><p>na plataforma e selecione as empresas que quer reservar</p></th>
+              <th><p>o espaço que mais se adequa a seus interesses</p></th>
+              <th><p>e vá ao espaço na data selecionada previamente</p></th>
+              <th><p>agora você pode utilizar o espaço sem preocupações</p></th>
+            </tr>
+          </table>
         </div>
       </section>
 
       <section className="py-5 my-5 section-cta section-cta_image">
-        <div className="container">
-          <div className="slide-content d-grid align-items-end gap-5 gap-md-0 text-responsive">
-            <div className="mb-5">
-              <p className="font-mont display-6 fw-bold text-white mb-3">
-                Junte-se a nós, escolha o seu time e não fique de fora!
+      <div className="d-flex flex-column-reverse flex-md-row gap-5 align-items-center h-100">
+          <div className="w-100 d-flex flex-column">
+            <div>
+            <p className="subtitle-white">
+            Funcionalidades para você
+            </p>
+            </div>
+            <div>
+            <p>O Tahvago foi projetado para proporcionar uma experiência intuitiva e eficiente no agendamento de espaços. 
+              Com um design amigável e funcionalidades acessíveis, o processo de reserva é simplificado, permitindo que os 
+              usuários reservem facilmente espaços que atendam às suas necessidades. 
               </p>
+              <p>A ferramenta oferece flexibilidade, permitindo ajustes de detalhes como horário, número de convidados e 
+              visualização detalhada do espaço. Isso garante uma experiência de reserva adaptada às necessidades individuais de cada usuário.</p>
+              </div>
+          </div>
+          <div className="w-100 d-flex align-items-end flex-column">
+          <Image src={Team5} alt="Sebrae" ></Image>
+          </div>
+        </div>
+      </section>
 
-              <div>
-                <Image
-                  src={LogosSlide}
-                  className="slide-img_logos mb-5 mb-md-0"
-                ></Image>
+      
+
+      <section className="py-5 section-teams">
+        <div className="container section-teams_content mb-4 mb-md-0">
+          <div className="d-md-flex gap-5 justify-content-center">
+            <p className="subtitle">
+              Nossos Clientes
+            </p>
+          </div>
+
+          <div className="show-desk">
+            <div className="d-grid gap-2 py-5 justify-content-center">
+              <div className="row gap-2">
+                <BoxTeam
+                  icon={LogoCredcrea}
+                  Comment="O Tahvago revolucionou a maneira como gerencio meu tempo e espaço de trabalho. 
+                  Agora, posso planejar minha semana de forma eficiente, reservando salas de reunião ou espaços de coworking conforme minha necessidade. 
+                  A praticidade e a flexibilidade oferecidas são incomparáveis."
+                  autor="Luciana Pereira Munhoz"
+                  link={"/times?selec=capacitação"}
+                ></BoxTeam>
+                <BoxTeam
+                  icon={LogoCredcrea}
+                  Comment="Eu nunca soube que agendar espaços de trabalho poderia ser tão fácil! Agora, posso reservar salas de reunião ou espaços de trabalho com apenas alguns cliques. 
+                  A interface intuitiva e a variedade de opções disponíveis são impressionantes. Recomendo a todos que buscam praticidade no gerenciamento de seus espaços de trabalho!"
+                  autor="Andréia Moura Nascimento"
+                  link={"/times?selec=empreendedorismo-e%20emprego"}
+                ></BoxTeam>
+                <BoxTeam
+                  icon={LogoCredcrea}
+                  Comment="Desde que comecei a usar esta ferramenta de agendamento para espaços de trabalho, minha produtividade decolou! Agora, consigo reservar uma sala tranquila 
+                  sempre que preciso me concentrar em um projeto importante. A facilidade de uso e a eficiência do sistema são incríveis. Não sei como consegui viver sem isso antes. 
+                  Altamente recomendado!"
+                  autor="Artur Saraiva Marins"
+                  link={
+                    "/times?selec=legislação-e%20valorização%20profissional"
+                  }
+                ></BoxTeam>
               </div>
             </div>
           </div>
@@ -269,169 +210,32 @@ export default function Home() {
 
       <section className="py-5 section-teams">
         <div className="container section-teams_content mb-4 mb-md-0">
-          <div className="section-teams_header d-md-flex gap-5 align-items-center">
-            <p className="title-2 font-faster">
-              <span className="title-marked">Times</span>
-            </p>
-            <p>
-              O programa está dividido em{" "}
-              <span className="text-marked">
-                times que respondem por temas e áreas
-              </span>{" "}
-              específicas que compõem o objetivo geral da sua criação. São elas:
+          <div className="d-md-flex gap-5 justify-content-center">
+            <p className="subtitle">
+              Empresas que possuem espaços cadastrados
             </p>
           </div>
-
-          <div className="show-desk">
-            <div className="d-grid gap-2 py-5 justify-content-center">
-              <div className="row gap-2">
-                <BoxTeam
-                  icon={Team1}
-                  title="CAPACITAÇÃO"
-                  description="Planejar, coordenar, ofertar, executar e avaliar os programas de capacitação e treinamento."
-                  link={"/times?selec=capacitação"}
-                ></BoxTeam>
-                <BoxTeam
-                  icon={Team2}
-                  title="EMPREENDEDORISMO E EMPREGO"
-                  description="Estimular o empreendedorismo e orientar os profissionais sobre essa oportunidade."
-                  link={"/times?selec=empreendedorismo-e%20emprego"}
-                ></BoxTeam>
-                <BoxTeam
-                  icon={Team3}
-                  title="LEGISLAÇÃO E VALORIZAÇÃO PROFISSIONAL"
-                  description="Disseminar conteúdos relacionados à legislação e ética profissional, bem como orientar sobre normas e regras disponíveis aos profissionais."
-                  link={
-                    "/times?selec=legislação-e%20valorização%20profissional"
-                  }
-                ></BoxTeam>
-              </div>
-
-              <div className="row gap-2">
-                <BoxTeam
-                  icon={Team4}
-                  title="RELAÇÕES INSTITUCIONAIS E INOVAÇÃO"
-                  description="Trazer instituições para apoiar ideias inovadoras e levar conteúdo de qualidade para a comunidade e jovens profissionais do sistema. Também é responsável por gerenciar todas as etapas necessárias para a realização de eventos, alinhados com as coordenações pertinentes."
-                  link={"/times?selec=relações-institucionais%20e%20inovação"}
-                ></BoxTeam>
-                <BoxTeam
-                  icon={Team5}
-                  title="ENTIDADES DE CLASSE"
-                  description="Gerenciar todas as ações relacionadas com as entidades de classe do sistema Confea/Crea e visa a aproximação e participação dos jovens profissionais em ações de interesse mútuo, entre elas a inserção de profissionais."
-                  link={"/times?selec=entidades-de%20classe"}
-                ></BoxTeam>
-                <BoxTeam
-                  icon={Team6}
-                  title="APOIO/GERAL"
-                  description="Integrar o programa e participar das atividades e processos administrativos do Programa Jovem Engenheiro. Poderão ser criados núcleos regionais de jovens profissionais de acordo com as inspetorias regionais do CREA-SC."
-                  link={"/times?selec=apoio/geral"}
-                ></BoxTeam>
-              </div>
-            </div>
+          <div className="row py-5">
+            <div class="col-sm justify-content-center"><Image src={LogoEmpresa1} className='Logo'></Image></div>
+            <div class="col-sm justify-content-center"><Image src={LogoEmpresa2} className='Logo'></Image></div>
+            <div class="col-sm justify-content-center"><Image src={LogoEmpresa3} className='Logo'></Image></div>
+            <div class="col-sm justify-content-center"><Image src={LogoEmpresa4} className='Logo'></Image></div>
+            <div class="col-sm justify-content-center"><Image src={LogoEmpresa5} className='Logo'></Image></div>
+            <div class="col-sm justify-content-center"><Image src={LogoEmpresa6} className='Logo'></Image></div> 
           </div>
-
-          <div className="show-responsive">
-            <Slider clase="slider-teams">
-              <SwiperSlide>
-                <BoxTeam
-                  icon={Team1}
-                  title="CAPACITAÇÃO"
-                  description="Planejar, coordenar, ofertar, executar e avaliar os programas de capacitação e treinamento."
-                  link={"#"}
-                ></BoxTeam>
-              </SwiperSlide>
-
-              <SwiperSlide>
-                <BoxTeam
-                  icon={Team2}
-                  title="EMPREENDEDORISMO E EMPREGO"
-                  description="Estimular o empreendedorismo e orientar os profissionais sobre essa oportunidade."
-                  link={"#"}
-                ></BoxTeam>
-              </SwiperSlide>
-
-              <SwiperSlide>
-                <BoxTeam
-                  icon={Team3}
-                  title="LEGISLAÇÃO E VALORIZAÇÃO PROFISSIONAL"
-                  description="Disseminar conteúdos relacionados à legislação e ética profissional, bem como orientar sobre normas e regras disponíveis aos profissionais."
-                  link={"#"}
-                ></BoxTeam>
-              </SwiperSlide>
-
-              <SwiperSlide>
-                <BoxTeam
-                  icon={Team4}
-                  title="RELAÇÕES INSTITUCIONAIS E INOVAÇÃO"
-                  description="Trazer instituições para apoiar ideias inovadoras e levar conteúdo de qualidade para a comunidade e jovens profissionais do sistema. Também é responsável por gerenciar todas as etapas necessárias para a realização de eventos, alinhados com as coordenações pertinentes."
-                  link={"#"}
-                ></BoxTeam>
-              </SwiperSlide>
-
-              <SwiperSlide>
-                <BoxTeam
-                  icon={Team5}
-                  title="ENTIDADES DE CLASSE"
-                  description="Gerenciar todas as ações relacionadas com as entidades de classe do sistema Confea/Crea e visa a aproximação e participação dos jovens profissionais em ações de interesse mútuo, entre elas a inserção de profissionais."
-                  link={"#"}
-                ></BoxTeam>
-              </SwiperSlide>
-
-              <SwiperSlide>
-                <BoxTeam
-                  icon={Team6}
-                  title="APOIO/GERAL"
-                  description="Integrar o programa e participar das atividades e processos administrativos do Programa Jovem Engenheiro. Poderão ser criados núcleos regionais de jovens profissionais de acordo com as inspetorias regionais do CREA-SC."
-                  link={"#"}
-                ></BoxTeam>
-              </SwiperSlide>
-            </Slider>
-          </div>
-
-          <div className="bg-blur"></div>
+                    
         </div>
       </section>
 
-      <section className="py-5 my-5 section-cta section-cta_inscription">
-        <div className="container d-md-flex justify-content-center align-items-center section-cta_inscription-bg p-5">
-          <div className="w-100 text-white ps-0 ps-md-5">
-            <p className="title">
-              <span className="title-marked2 fw-bold">Como posso</span> me
-              inscrever?
-            </p>
-            <p>
-              O jovem profissional interessado em participar deverá se inscrever{" "}
-              <span className="fw-bold">
-                acessando o seu Creanet profissional
-              </span>{" "}
-              , preencher o formulário disponível, escolher seu time e
-              justificar sobre sua intenção e motivação de participação no time
-              escolhido.
-            </p>
-          </div>
-          <div className="w-100 d-md-flex justify-content-center align-items-center mt-5 mt-md-0">
-            <div>
-              <Button
-                link={"/inscricao"}
-                type="button-primary"
-                text="Fazer minha inscrição"
-              ></Button>
-            </div>
-          </div>
-        </div>
-      </section>
 
-      <section className="container pt-5 mt-5" id="produtos">
-        <div className="section-teams_header d-md-flex gap-5 align-items-center pt-5 pt-md-0">
-          <p className="title-2 font-faster" id="produtos">
-            <span className="title-marked">Produtos</span>
-          </p>
-          <p>
-            Os produtos e serviços a seguir são oportunidades para{" "}
-            <span className="text-marked">
-              impulsionar sua carreira e criar conexões.
-            </span>
-          </p>
+      <section className="section-teams_header ">
+        <div className="justify-content-center align-items-center">
+          <p className="subtitle-white">Faça seu cadastro agora e </p>
+          <p className="subtitle-white">começe a utilizar os espaços!</p>
+          
+          <div className="d-flex justify-content-center mt-4">
+          <button>Cadastre-se</button>
+          </div>
         </div>
       </section>
 

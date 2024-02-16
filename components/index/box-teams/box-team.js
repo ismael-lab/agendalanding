@@ -1,19 +1,23 @@
 import Image from "next/image";
 import Button from "../../buttons/button";
 
-export default function BoxTeam ({icon, title, description, link}){
+export default function BoxTeam ({icon, Comment, autor}){
     return(
         <>
         <div className="box-team-bg col align-self-stretch d-grid align-content-between">
-            <div>
-                <div className="d-flex gap-2 justify-content-start align-items-start">
-                    <Image src={icon} alt='icon'></Image>
-                    <p className="title-4 font-faster">{title}</p>
-                </div>
-                <p>{description}</p>
+        <div className="d-flex">
+        <div>
+            <div className="d-flex gap-2 justify-content-center align-items-start mx-2 ">
+                <Image src={icon} alt='icon'></Image>
             </div>
-            <Button link={link} type='button-secondary' text='Saiba mais'></Button>
         </div>
+        <div>
+            <p className="text-comment">{Comment}</p>
+            <p className="text-autor">{autor}</p>
+        </div>
+    </div>
+</div>
+
         </>
     )
 }
