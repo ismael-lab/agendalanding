@@ -36,7 +36,7 @@ export default function Header (){
                 <div id="navbarNav">
                     <ul className="navbar-nav ms-auto gap-4 gap-md-0 py-3 py-md-4">
                         <li className="nav-item"><Link id = "link-/" onClick={() => onChange('/')} href={'/'} className='nav-border px-3'>Quero cadastrar</Link></li>
-                        <li className="nav-item"><Link id = "link-/times" onClick={() => onChange('/times')} href={'/times'} className='nav-border px-3'>Quero reservar</Link></li>
+                        <li className="nav-item"><Link id = "link-/times" onClick={() => onChange('/inscricao')} href={'/inscricao'} className='nav-border px-3'>Quero reservar</Link></li>
                         
                     </ul>
                 </div>

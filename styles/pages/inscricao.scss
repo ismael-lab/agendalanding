@@ -1,3 +1,39 @@
 .section-inscription{
     max-width: 800px;
 }
+
+/* Com o tahvago voce tem*/
+.container-{
+    background-color: #FFFFFF10;
+    border: solid 2px white;
+    border-radius: 5%;
+    width: 300px;
+    height: 200px;
+    margin: 1cap;
+    padding: 2ch;
+    color: white;
+}
+
+.title-container{
+    font-weight: 700;
+}
+
+.section-form{
+    display: grid;
+    place-items: center;
+    background-image: url('../../public/images/bg2.png');
+    background-size: cover;
+    height: 600px;
+}
+
+.container-forms{
+    background-color: white;
+    border-radius: 8pt;
+}
+
+input{
+    border-radius: 3pt;
+    height: 40px;
+    margin-bottom: 2ch;
+    width: 35vw;
+}

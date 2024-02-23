@@ -1,3 +1,4 @@
+
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
@@ -26,7 +27,7 @@ export default function Slider({children, clase, slides, center, gap}) {
           pagination={{
             clickable: true,
           }} 
-          autoplay={{disableOnInteraction: false,
+          autoplay={{disableOnInteraction: true,
           delay: 3500,
           pauseOnMouseEnter: true,}}
           

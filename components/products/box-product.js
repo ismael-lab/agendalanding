@@ -24,7 +24,7 @@ export default function BoxProduct ({title, description, link, clase,mail,mailHa
         <div className={`mx-auto ${clase}`}> {/*cuando este visible tiene el estilo: box-product_active */}
             <div className="box-product_content">
                 <div className="">
-                    <p className="title-4 font-faster">{title}</p>
+                    <p className="title-4">{title}</p>
                 </div>
                 <p>{description}</p>
             

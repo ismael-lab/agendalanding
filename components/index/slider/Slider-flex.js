@@ -24,7 +24,7 @@ export default function SliderFlex({children, clase}) {
         className={clase}
         breakpoints={{
           // when window width is >= 640px
-          300: {
+          350: {
             slidesPerView: 1,
             spaceBetween: 5,
             

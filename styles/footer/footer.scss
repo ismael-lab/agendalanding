@@ -4,7 +4,7 @@ footer{
     color: white ;
     background-size: contain;
     background-position: bottom;
-    background-image: radial-gradient(28% 48% at -11% 57%, #D9F500BA 7%, #073AFF00 100%),radial-gradient(35% 56% at 73% 103%, #D9F5008F 9%, #073AFF00 100%),linear-gradient(125deg, #111BD7 1%, #111BD7 100%);
+    background-color: $primary;
 
     a{
         color: white;

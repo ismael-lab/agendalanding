@@ -13,14 +13,14 @@ export default function SliderFlexContainer({children, clase,onSlideChange}) {
     <>
       <Swiper
         modules={[Navigation]}
-        grabCursor={true}
+        grabCursor={false}
         navigation={true}
         onSlideChange={onSlideChange}
         initialSlide={2}
         pagination={{
           clickable: true,
         }}
-        /* modules={[Pagination]} */
+        // modules={[Pagination]} 
         className={clase}
         breakpoints={{
           // when window width is >= 640px
@@ -48,8 +48,8 @@ export default function SliderFlexContainer({children, clase,onSlideChange}) {
 
           1200: {
             slidesPerView: 6,
-            spaceBetween: 30,
-            loop: false,
+            spaceBetween: 90,
+            loop: true,
             centeredSlides: true,
           },
         }}

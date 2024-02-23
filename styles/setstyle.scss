@@ -50,11 +50,28 @@ body{
     font-family: 'Faster-italic';
 }
 
+.image-slider{
+    align-items: center;
+    justify-content: center;
+}
+
 /* Texts */
 .title{
     font-size:  min(37px, calc(1em + 1vw));
     line-height: 40px;
-    margin-bottom: 30px;
+    color: $primary;
+    font-weight: 600;
+}
+
+.title-body {
+    color: $primary;
+    font-weight: 700;
+}
+
+.description-scream{
+    text-align: center;
+    font-size: 10pt;
+    color: $purple1;
 }
 
 .title-2{
@@ -307,15 +324,15 @@ button{
     color: white;
     position: relative;
     width: 50vw;
-    max-width: 800px;
+    max-width: 500px;
     height: 200px;
 }
 
 .box-skew_times{
     color: white;
     position: relative;
-    width: 50%;
-    max-width: 800px;
+    width: 30%;
+    max-width: 500px;
     height: 200px;
 }
 
@@ -359,141 +376,44 @@ button{
     border-radius: 8px;
 }
 
-.box-team_slide{
-    position: relative;
-    width: 180px;
-    height: 180px;
-    transition: .3s ease-in-out;
-    cursor: pointer;
-    .box-product_content{
-        position: absolute;
-        top: 0%;
-        padding: 30px;
-        width: 100%;
-        height: 100%;
-        z-index: 2;
-    }
-}
 
 .box-product{
     position: relative;
-    width: 250px;
-    height: 350px;
     transition: .3s ease-in-out;
+    padding: 40px;
+    width: 300px;
 }
 
-.box-product_content{
-    position: absolute;
-    top: 13%;
-    padding: 30px;
-    width: 100%;
-    height: 100%;
-    z-index: 2;
-}
-
-.box-product_bg{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 1;
-    background: $blue0;
-    width: 100%;
-    height: 100%;
-    -webkit-clip-path: polygon(0 8%, 100% 8%, 100% 92%, 0 92%);
-    clip-path: polygon(0 8%, 100% 8%, 100% 92%, 0 92%);
-    transition: .3s ease-in-out;
-}
 
 /* Box product hover */
-.box-product:hover .box-product_bg{
-    background: $green2;
-    -webkit-clip-path: polygon(0 8%, 100% 0, 100% 92%, 0 100%);
-    clip-path: polygon(0 8%, 100% 0, 100% 92%, 0 100%);
-}
 
-.box-product:hover{
-    transform: scale(1.05);
-}
 
-.box-product_button{
-    display: none;
-}
-
-.box-product:hover .box-product_button{
-    display: block;
-    animation-duration: .5s;
-    animation-name: tobottom;
-}
 
 .box-product_active {
     position: relative;
     width: 250px;
     height: 350px;
-    transition: .3s ease-in-out;
-    transform: scale(1.05);
-
-    .box-product_bg{
-        background: $green2;
-        -webkit-clip-path: polygon(0 8%, 100% 0, 100% 92%, 0 100%);
-        clip-path: polygon(0 8%, 100% 0, 100% 92%, 0 100%);
-    }
-    
-    .box-product_button{
-        display: block;
-        animation-duration: .5s;
-        animation-name: tobottom;
-    }
+    transition: .5s ease-in-out;
+    transform: scale(1.3);
 }
 
 .box-team_slide_active {
     position: relative;
-    width: 180px;
+    width: 280px;
     height: 180px;
     transition: .3s ease-in-out;
 
-    .box-product_bg{
-        background: $green2;
-        -webkit-clip-path: polygon(0 8%, 100% 0, 100% 92%, 0 100%);
-        clip-path: polygon(0 8%, 100% 0, 100% 92%, 0 100%);
-    }
-    
-    .box-product_button{
-        display: block;
-        animation-duration: .5s;
-        animation-name: tobottom;
-    }
-}
-
-.box-steps{
-    display: flex;
-    margin-top: 40px;
-    flex-direction: row;
-    justify-content: center;
-    gap: 3rem;
-}
-
-.step-box{
-    display: flex;
-    width: 33%;
-}
-
-.step-number{
-    margin-right: 0.5rem;
-    margin-top: 0.25rem;
-}
-
-.step-text{
-    font-size: 15px;
-    font-weight: 400;
-    line-height: 18.15px;
 }
 
 
-.button-steps-link{
-    margin: 40px auto;
 
-}
+
+
+
+
+
+
+
 
 .title-times{
     color:#1D1D1D !important;

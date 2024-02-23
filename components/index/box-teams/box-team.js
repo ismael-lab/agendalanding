@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Button from "../../buttons/button";
 
 export default function BoxTeam ({icon, Comment, autor}){
     return(
