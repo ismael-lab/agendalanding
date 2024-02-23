@@ -170,7 +170,7 @@ export default function Home() {
                 </h2>
                 <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                   <div class="accordion-body">
-                    <p className="text-description">Salve na sua tela inicial as empresas que você deseja utilizar os espaços disponíveis e tenha sempre um fácil acesso a elas</p><code></code>
+                    <p className="text-description">Enquanto realiza a reserva você pode inserir o e-mail dos convidados da sua reunião. Quando finalizada a reserva eles receberão uma cópia da reserva realizada.</p><code></code>
                   </div>
                 </div>
               </div>
@@ -280,37 +280,80 @@ export default function Home() {
 
       <section className="container py-3 my-5">
         <div>
-          <p>Perguntas frequentes</p>
+          <p className="subtitle">Ficou com alguma dúvida? Estamos aqui para te ajudar!</p>
+          <p>Caso sua dúvida não esteja listada aqui, entre em contato conosco.</p>
         </div>
 
         <div class=" accordion-faq accordion-flush" id="accordionFlush">
 
-          <div class="accordion-item py-2">
+          <div class="accordion-item-faq py-4">
             <div class="">
-              <div class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                <p>O que é o CREA Acelera?</p>
+              <div class="accordion-button " type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                <p>Como faço meu cadastro na plataforma?</p>
               </div>
             </div>
             <div id="flush-collapseOne" class="accordion-collapse collapse px-4" data-bs-parent="#accordionFlush">
-              <p >O CREA Acelera é um programa de <strong>aceleração</strong> empresarial e uma iniciativa importante para empresas que buscam aumentar a produtividade, a lucratividade e vantagens competitivas no mercado.</p>
+              <p >Para entrar na plataforma você só precisa clicar no botão de entrar, na parte superior do menu da página. Você será redirecionado para a tela de login e basta selecionar Fazer cadastro.</p>
             </div>
           </div>
 
-          <div class="accordion-item  py-2">
+          <div class="accordion-item-faq  py-4">
             <h2 class="accordion-header">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                <p>Por qual dos serviços devo começar?</p>
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                <p>Preciso pagar para ter uma conta no Tahvago?</p>
               </button>
             </h2>
             <div id="flush-collapseTwo" class="accordion-collapse collapse px-4" data-bs-parent="#accordionFlush">
-              <p>Sugere-se fortemente que seja <strong>realizado o diagnóstico inicial (Agente de Orientação Empresarial)</strong>. Após isto, o consultor do Sebrae lhe oferecerá todo suporte para os próximos passos.</p>
+              <p>A criação de uma conta no Tahvago é gratuita! Para utilizar nossa ferramenta você só precisa cadastrar-se clicando aqui.</p>
+            </div>
+          </div>
+
+          <div class="accordion-item-faq  py-4">
+            <h2 class="accordion-header">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                <p>Preciso pagar para reservar um espaço?</p>
+              </button>
+            </h2>
+            <div id="flush-collapseThree" class="accordion-collapse collapse px-4" data-bs-parent="#accordionFlush">
+              <p>O pagamento para utilização dos espaços varia de acordo com cada empresa. Os valores são cadastrados no sistema pela empresa responsável pelo espaço e sinalizados na tela dos espaços disponíveis. </p>
+            </div>
+          </div>
+
+          <div class="accordion-item-faq  py-4">
+            <h2 class="accordion-header">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                <p>Como faço para reservar um espaço?</p>
+              </button>
+            </h2>
+            <div id="flush-collapseFour" class="accordion-collapse collapse px-4" data-bs-parent="#accordionFlush">
+              <p>Reservar um espaço é simples, você só precisa se cadastrar na ferramenta e buscar pelos ambientes mais próximos a você. Você pode colocá-los em seu acesso rápido para ter uma visualização mais ágil. Após selecionar o ambiente no qual quer reservar um espaço você navega pelos espaços disponíveis e seleciona aquele que mais se adequa às suas necessidades. Quando escolhido o espaço você só precisa informar os dados solicitados e confirmar a reserva.</p>
+            </div>
+          </div>
+
+          <div class="accordion-item-faq  py-4">
+            <h2 class="accordion-header">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+                <p>Não consigo acessar os espaços de uma empresa específica</p>
+              </button>
+            </h2>
+            <div id="flush-collapseFive" class="accordion-collapse collapse px-4" data-bs-parent="#accordionFlush">
+              <p>Algumas empresas registradas no Tahvago possuem pré requisitos para acesso aos seus espaços. Quando necessário você verá um pop up pedindo alguma informação a mais para poder utilizar o ambiente escolhido. Ao enviar os dados a empresa precisará aprovar sua entrada, após aprovado uma vez você não será mais solicitado a inserir essa informação e poderá acessar direto.</p>
+            </div>
+          </div>
+
+          <div class="accordion-item-faq  py-4">
+            <h2 class="accordion-header">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseSix">
+                <p>Como faço para editar uma reserva?</p>
+              </button>
+            </h2>
+            <div id="flush-collapseSix" class="accordion-collapse collapse px-4" data-bs-parent="#accordionFlush">
+              <p>No momento não possuímos a função de editar uma reserva, caso precise alterar algum detalhe da sua reserva como data e hora será necessário que você cancele a reserva em “minhas reservas” e clicando na reserva em questão e realizando uma nova solicitação para aquele espaço.</p>
             </div>
           </div>
 
           
-
         </div>
-
       </section>
 
 

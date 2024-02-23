@@ -74,17 +74,31 @@
     border-radius: 8px;
     width: 680px;
     background-color: #FFFFFF00;
-    
 }
 
-.accordion-button {
+.heard-faq{
+    border: 1px solid white;
+    border-radius: 8px;
+    width: 680px;
+    background-color: #FFFFFF00;
+}
+
+.accordion-button{
     background-color: transparent;
     font-weight: 500;
-
 }
 
 accordion-button-active{
     background-color: transparent;
+}
+
+.accordion-button p{
+    background-color: transparent;
+    font-weight: 600;
+}
+
+.accordion-item-faq {
+    border-bottom: 1px solid #ccc;
 }
 
 
@@ -120,20 +134,20 @@ accordion-button-active{
 }
 
 .accordion-faq {
-    --bs-accordion-color: #30036A;
+    --bs-accordion-color: #4B1099;
     --bs-accordion-bg: #ffffff00;
-    --bs-accordion-btn-margin-y: 1rem;
-    --bs-accordion-btn-color: #000;
+    --bs-accordion-btn-margin-y: none;
+    --bs-accordion-btn-color: #4B1099;
     --bs-accordion-btn-icon: url('../../public/images/icons/Plus.svg');
     --bs-accordion-btn-icon-width: 1.25rem;
     --bs-accordion-btn-icon-transform: rotate(-180deg);
-    --bs-accordion-btn-icon-transition: transform 0.2s ease-in-out;
+    --bs-accordion-btn-icon-transition: ;
     --bs-accordion-btn-active-icon: url('../../public/images/icons/Minus.svg');
-    --bs-accordion-btn-focus-border-wigth: 4px;
+    --bs-accordion-btn-focus-border-wigth: none;
     --bs-accordion-btn-focus-box-shadow: none;
-    --bs-accordion-body-padding-x: 1.25rem;
-    --bs-accordion-body-margin-y: 4px;
-    --bs-accordion-active-color: #30036A;
+    --bs-accordion-body-padding-x: none;
+    --bs-accordion-body-margin-y:4px;
+    --bs-accordion-active-color: #4B1099;
     --bs-accordion-active-bg: #ffffff00;
 }
 

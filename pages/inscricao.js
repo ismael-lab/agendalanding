@@ -2,7 +2,7 @@
 import SliderFlex from "../components/index/slider/Slider-flex";
 import { Swiper, SwiperSlide } from "swiper/react";
 import Scream from "../components/products/scream-product";
-import {useState} from 'react';
+import { useState } from 'react';
 import emailjs from '@emailjs/browser';
 
 import Image from "next/image";
@@ -21,15 +21,15 @@ import Note5 from "../public/images/slider/note5.png";
 
 
 export default function Inscription() {
-  const[name, setName] = useState('')
-  const[email, setEmail] = useState('')
-  const[phone, setPhone] = useState('')
-  const[enterprise, setEnterprise] = useState('')
+  const [name, setName] = useState('')
+  const [email, setEmail] = useState('')
+  const [phone, setPhone] = useState('')
+  const [enterprise, setEnterprise] = useState('')
 
-  function sendEmail(e){
+  function sendEmail(e) {
     e.preventDefault();
 
-    if(name === '' || email ==='' || phone === '' || enterprise === ''){
+    if (name === '' || email === '' || phone === '' || enterprise === '') {
       alert("Preencha todos os campos");
       return;
     }
@@ -41,16 +41,16 @@ export default function Inscription() {
       Enterprise: enterprise
     }
 
-    emailjs.send("service_qods3q5","template_ebowaqc", templateParams, "feQOmJifOs1omeIQA")
-    .then((response) =>{
-      console.log("email enviado", response.status, response.text)
-      setName('')
-      setEmail(''),
-      setPhone(''),
-      setEnterprise('');
-    }, (err) =>{
-      console.log("ERRO: ", err)
-    })
+    emailjs.send("service_qods3q5", "template_ebowaqc", templateParams, "feQOmJifOs1omeIQA")
+      .then((response) => {
+        console.log("email enviado", response.status, response.text)
+        setName('')
+        setEmail(''),
+          setPhone(''),
+          setEnterprise('');
+      }, (err) => {
+        console.log("ERRO: ", err)
+      })
   }
 
 
@@ -92,95 +92,95 @@ export default function Inscription() {
           </div>
         </div>
       </section>
-     
+
       <section className="section-products my-auto" id="produtos">
         <div className="slider-w align-content-center py-5">
-        <SliderFlex clase="section-products_slide slide py-5">
-          <SwiperSlide className="">
-            {({ isActive }) => (
-              <Scream
-                image={Note1}
-                title="Gerencie"
-                description="os pedidos de reservas, usuários e checkin/checkout do seu ambiente."
-                clase={isActive ? "box-product_active" : "box-product"}
-              ></Scream>
-            )}
-          </SwiperSlide>
+          <SliderFlex clase="section-products_slide slide py-5">
+            <SwiperSlide className="">
+              {({ isActive }) => (
+                <Scream
+                  image={Note1}
+                  title="Gerencie"
+                  description="os pedidos de reservas, usuários e checkin/checkout do seu ambiente."
+                  clase={isActive ? "box-product_active" : "box-product"}
+                ></Scream>
+              )}
+            </SwiperSlide>
 
-          <SwiperSlide>
-          {({ isActive }) => (
-              <Scream
-                image={Note2}
-                title="Incidentes"
-                description="visualize e atualize o status do incidentes reportados em seus espaços."
-                clase={isActive ? "box-product_active" : "box-product"}
-              ></Scream>
-            )}
-          </SwiperSlide>
+            <SwiperSlide>
+              {({ isActive }) => (
+                <Scream
+                  image={Note2}
+                  title="Incidentes"
+                  description="visualize e atualize o status do incidentes reportados em seus espaços."
+                  clase={isActive ? "box-product_active" : "box-product"}
+                ></Scream>
+              )}
+            </SwiperSlide>
 
-          <SwiperSlide>
-          {({ isActive }) => (
-              <Scream
-                image={Note3}
-                title="Personalize"
-                description="Personalize sua interface de acordo com a identidade visual da sua marca."
-                clase={isActive ? "box-product_active" : "box-product"}
-              ></Scream>
-            )}
-          </SwiperSlide>
+            <SwiperSlide>
+              {({ isActive }) => (
+                <Scream
+                  image={Note3}
+                  title="Personalize"
+                  description="Personalize sua interface de acordo com a identidade visual da sua marca."
+                  clase={isActive ? "box-product_active" : "box-product"}
+                ></Scream>
+              )}
+            </SwiperSlide>
 
-          <SwiperSlide>
-          {({ isActive }) => (
-              <Scream
-                image={Note4}
-                title="Visualize"
-                description="de forma simples os seus espaços cadastrados na plataforma."
-                clase={isActive ? "box-product_active" : "box-product"}
-              ></Scream>
-            )}
-          </SwiperSlide>
+            <SwiperSlide>
+              {({ isActive }) => (
+                <Scream
+                  image={Note4}
+                  title="Visualize"
+                  description="de forma simples os seus espaços cadastrados na plataforma."
+                  clase={isActive ? "box-product_active" : "box-product"}
+                ></Scream>
+              )}
+            </SwiperSlide>
 
-          <SwiperSlide>
-          {({ isActive }) => (
-              <Scream
-                image={Note5}
-                title="Cadastre"
-                description="de forma simples e intuitiva os dados a respeito do seu espaço."
-                clase={isActive ? "box-product_active" : "box-product"}
-              ></Scream>
-            )}
-          </SwiperSlide>
-        </SliderFlex>
+            <SwiperSlide>
+              {({ isActive }) => (
+                <Scream
+                  image={Note5}
+                  title="Cadastre"
+                  description="de forma simples e intuitiva os dados a respeito do seu espaço."
+                  clase={isActive ? "box-product_active" : "box-product"}
+                ></Scream>
+              )}
+            </SwiperSlide>
+          </SliderFlex>
 
         </div>
-        
+
       </section>
 
       <section className="py-5 my-5 section-cta section-cta_image">
         <div className="container py-2 my-4">
-        <div>
-          <p className="subtitle-white">
-            Por que usar o <span><Image src={LogoClara} className='logo'></Image></span> na sua empresa?
-          </p>
-        </div>
-        <div className="row gap-2 justify-content-center">
-          <div className="container-">
-            <p className="title-container">Acompanhamento da taxa de ocupação dos espaços</p>
-            <p>Acompanhe como está a frequência e quantidade de reservas dos seus espaços disponíveis.</p>
+          <div>
+            <p className="subtitle-white">
+              Por que usar o <span><Image src={LogoClara} className='logo'></Image></span> na sua empresa?
+            </p>
           </div>
-          <div className="container-">
-            <p className="title-container">Criação e permissões de usuários da sua empresa</p>
-            <p>Cadastre os usuários que fazem parte da sua empresa para auxiliar na gestão de seus espaços, reservas e incidentes.</p>
+          <div className="row gap-2 justify-content-center">
+            <div className="container-">
+              <p className="title-container">Acompanhamento da taxa de ocupação dos espaços</p>
+              <p>Acompanhe como está a frequência e quantidade de reservas dos seus espaços disponíveis.</p>
+            </div>
+            <div className="container-">
+              <p className="title-container">Criação e permissões de usuários da sua empresa</p>
+              <p>Cadastre os usuários que fazem parte da sua empresa para auxiliar na gestão de seus espaços, reservas e incidentes.</p>
+            </div>
+            <div className="container-">
+              <p className="title-container">Controles de checkin, checkout e reserva</p>
+              <p>Selecione quais espaços ofertados terão controle de checkin, checkout e reserva e quais usuários cadastrados irão fazer o controle.</p>
+            </div>
+            <div className="container-">
+              <p className="title-container">Cadastro de bloqueios anuais para os seu espaços</p>
+              <p>Cadastre dias em que seus espaços não estarão disponíveis, como feriados e outras ocasiões específicas da sua empresa.</p>
+            </div>
           </div>
-          <div className="container-">
-            <p className="title-container">Controles de checkin, checkout e reserva</p>
-            <p>Selecione quais espaços ofertados terão controle de checkin, checkout e reserva e quais usuários cadastrados irão fazer o controle.</p>
-          </div>
-          <div className="container-">
-            <p className="title-container">Cadastro de bloqueios anuais para os seu espaços</p>
-            <p>Cadastre dias em que seus espaços não estarão disponíveis, como feriados e outras ocasiões específicas da sua empresa.</p>
-          </div>
-        </div>
         </div>
       </section>
 
@@ -231,35 +231,35 @@ export default function Inscription() {
             <form className="d-flex flex-column form" onSubmit={sendEmail} >
               <p className="title-body d-flex justify-content-start">Nome completo</p>
               <input
-              className="input"
-              type="text"
-              placeholder="  Escreva"
-              onChange={(e) => setName(e.target.value)}
-              value={name}
+                className="input"
+                type="text"
+                placeholder="  Escreva"
+                onChange={(e) => setName(e.target.value)}
+                value={name}
               ></input>
               <p className="title-body d-flex justify-content-start">E-mail coorporativo</p>
               <input
-              className="input"
-              type="text"
-              placeholder="  example@example.com"
-              onChange={(e) => setEmail(e.target.value)}
-              value={email}
+                className="input"
+                type="text"
+                placeholder="  example@example.com"
+                onChange={(e) => setEmail(e.target.value)}
+                value={email}
               ></input>
               <p className="title-body d-flex justify-content-start">Telefone</p>
               <input
-              className="input"
-              type="text"
-              placeholder="  (xx) xxxxx-xxxx"
-              onChange={(e) => setPhone(e.target.value)}
-              value={phone}
+                className="input"
+                type="text"
+                placeholder="  (xx) xxxxx-xxxx"
+                onChange={(e) => setPhone(e.target.value)}
+                value={phone}
               ></input>
               <p className="title-body d-flex justify-content-start">Nome da empresa</p>
               <input
-              className="input"
-              type="text"
-              placeholder="  Escreva"
-              onChange={(e) => setEnterprise(e.target.value)}
-              value={enterprise}
+                className="input"
+                type="text"
+                placeholder="  Escreva"
+                onChange={(e) => setEnterprise(e.target.value)}
+                value={enterprise}
               ></input>
               <input className="button" type="submit" value={"enviar"}></input>
             </form>
@@ -267,39 +267,60 @@ export default function Inscription() {
         </div>
       </section>
 
-      <section>
+      <section className="container py-3 my-5">
         <div>
-          <p>Perguntas frequentes</p>
+          <p className="subtitle">Ficou com alguma dúvida? Estamos aqui para te ajudar!</p>
+          <p>Caso sua dúvida não esteja listada aqui, entre em contato conosco.</p>
         </div>
 
-        <div class="accordion accordion-flush" id="accordionFlush">
+        <div class=" accordion-faq accordion-flush" id="accordionFlush">
 
-          <div class="accordion-item py-2">
+          <div class="accordion-item-faq py-4">
             <div class="">
-              <div class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                <p>O que é o CREA Acelera?</p>
+              <div class="accordion-button " type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                <p>Como crio uma conta para a minha empresa?</p>
               </div>
             </div>
             <div id="flush-collapseOne" class="accordion-collapse collapse px-4" data-bs-parent="#accordionFlush">
-              <p >O CREA Acelera é um programa de <strong>aceleração</strong> empresarial e uma iniciativa importante para empresas que buscam aumentar a produtividade, a lucratividade e vantagens competitivas no mercado.</p>
+              <p >Para cadastrar sua empresa você precisa entrar em contato por meio do botão de contato no menu ou pelo formulário de contato, após isso alguém de nossa equipe entrará em contato para realizar o contrato e ajudar em seus primeiros passos na plataforma.</p>
             </div>
           </div>
 
-          <div class="accordion-item  py-2">
+          <div class="accordion-item-faq  py-4">
             <h2 class="accordion-header">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                <p>Por qual dos serviços devo começar?</p>
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                <p>Como cadastrar espaços na plataforma?</p>
               </button>
             </h2>
             <div id="flush-collapseTwo" class="accordion-collapse collapse px-4" data-bs-parent="#accordionFlush">
-              <p>Sugere-se fortemente que seja <strong>realizado o diagnóstico inicial (Agente de Orientação Empresarial)</strong>. Após isto, o consultor do Sebrae lhe oferecerá todo suporte para os próximos passos.</p>
+              <p>Para cadastrar seus espaços em nossa plataforma você só precisa ter uma conta ativa. Ao entrar no sistema você precisa ir em Configurações do ambiente - Espaços - Cadastrar novo espaço. Preencha as informações necessárias e publique seu espaço.</p>
+            </div>
+          </div>
+
+          <div class="accordion-item-faq  py-4">
+            <h2 class="accordion-header">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                <p>Preciso pagar para ter minha empresa na plataforma?</p>
+              </button>
+            </h2>
+            <div id="flush-collapseThree" class="accordion-collapse collapse px-4" data-bs-parent="#accordionFlush">
+              <p>Nossa plataforma de agendamento é gratuita! Você não precisa pagar para utilizá-la.</p>
+            </div>
+          </div>
+
+          <div class="accordion-item-faq  py-4">
+            <h2 class="accordion-header">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                <p>Como habilito meus usuários a utilizarem os controles?</p>
+              </button>
+            </h2>
+            <div id="flush-collapseFour" class="accordion-collapse collapse px-4" data-bs-parent="#accordionFlush">
+              <p>Para habilitar seus usuários a utilizarem os controles é preciso que você os cadastre na aba de usuários nas configurações do seu ambiente e insira o usuário nos controles do espaço que você deseja que ele gerencie.</p>
             </div>
           </div>
 
           
-
         </div>
-
       </section>
 
 
