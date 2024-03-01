@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import LogoSebrae from "../public/images/img1.png";
 import EmailIcon from '../public/images/footer/social-icons/email-icon-outline';
 import FacebookIcon from '../public/images/footer/social-icons/facebook-icon';
 import TwitterIcon from '../public/images/footer/social-icons/twitter-icon';
@@ -15,41 +16,48 @@ import LocationIcon from '../public/images/footer/social-icons/location.svg';
 
 const Footer = () => {
     return (
-    <>
-    <footer>
-        <div className="container footer-section p-5 d-flex flex-row flex-md-row justify-content-between align-items-start gap-5 text-blue" id='footer'>
+        <>
+            <footer>
+                <div className="d-flex flex-column-reverse flex-md-row gap-5 align-items-center p-5 h-100">
+                    <div className="w-100">
+                        <div className='w-100'>
+                            <Image src={CreaYears} alt='' className='footer-img'></Image>
+                        </div>
+                    </div>
 
-            <div className='d-grid gap-4'>
-                
-                <Image src={CreaYears} alt='Crea 65 anos' className='footer-img'></Image>
-                    
-                <div className="d-flex gap-3">
-                        <Link href={'https://www.facebook.com/creasc'}>
-                            <FacebookIcon fill='white'></FacebookIcon>
-                        </Link>
-
-                        <Link href={'https://twitter.com/creasc'}>
-                            <TwitterIcon fill='white'></TwitterIcon>    
-                        </Link>
-
-                        <Link href={'https://www.instagram.com/creascoficial/'}>
-                            <InstagramIcon fill='white'></InstagramIcon>
-                        </Link>
-
-                        <Link href={'https://www.linkedin.com/company/crea---sc/?originalSubdomain=br'}>
-                            <LinkedinIcon fill='white'></LinkedinIcon>
-                        </Link>
-
-                        <Link href={'https://www.youtube.com/@creasc'}>
-                            <YoutubeIcon fill='white'></YoutubeIcon>
-                        </Link>
-                        
+                    <div className="w-100 d-flex align-items-end justify-content-center flex-column">
+                        <Link id="link-/" onClick={() => onChange('/')} href={'/'} className=' d-flex align-items-end justify-items-end'>contato@tahvago.com.br</Link>
+                        <div className="d-flex align-items-center py-2">
+                            <p className="m-0">Redes sociais:</p>
+                            <div className="d-flex align-items-center">
+                                <Link href={'https://www.instagram.com/creascoficial/'} className='px-2'>
+                                    <InstagramIcon fill='white'></InstagramIcon>
+                                </Link>
+                                <Link href={'https://www.linkedin.com/company/crea---sc/?originalSubdomain=br'}>
+                                    <LinkedinIcon fill='white'></LinkedinIcon>
+                                </Link>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
 
-        </div>
-    </footer>   
-    </>
+                <hr className='mx-4' />
+
+                <div className="d-flex flex-column-reverse flex-md-row gap-5 align-items-center px-5 py-4">
+                    <div className="w-100">
+                        <Link href={'https://www.linkedin.com/company/crea---sc/?originalSubdomain=br'} className='px-3'>SOBRE</Link>
+                        <Link href={'https://www.linkedin.com/company/crea---sc/?originalSubdomain=br'} className='px-3'>ENTRE EM CONTATO</Link>
+                        <Link href={'https://www.linkedin.com/company/crea---sc/?originalSubdomain=br'} className='px-3'>POLITICA DE PRIVACIDADE</Link>
+                    </div>
+
+                    <div className="w-100 d-flex align-items-end justify-content-center flex-column">
+                        <p>Copyright © 2024 • Tahvago.</p>
+                    </div>
+                </div>
+
+            </footer>
+
+        </>
     )
 }
 

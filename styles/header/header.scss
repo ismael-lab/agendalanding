@@ -2,28 +2,42 @@
 
 .header{
     background: $primary;
-    height: 80px;
+    height: auto;
 }
 
-.logo{
+.logo {
     max-width: 100px;
 }
 
-.navbar-toggler{
-    border: none !important;
-}
-
-.navbar-toggler:focus{
-    box-shadow:none !important;
-}
- 
-.navbar-collapse{
+.navbar-collapse {
     background: $primary;
     border-radius: 20px;
 }
 
-@media (max-width:765px) {
-    .nav-border{ 
-        border-right: none;
-    }    
+.mobile-links ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
 }
+
+.mobile-links li {
+    margin: 0 10px;
+}
+
+@media (max-width: 400px) {
+    .navbar-collapse {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar-collapse button {
+        margin-top: 10px;
+    }
+
+    .mobile-links {
+        margin-top: 20px;
+    }
+}
+

@@ -32,18 +32,18 @@ export default function SliderFlex({children, clase}) {
           },
           // when window width is >= 768px
           768: {
-            slidesPerView: 3,
-            spaceBetween: 60,
+            slidesPerView: 1,
+            spaceBetween: 50,
           },
 
           992: {
-            slidesPerView: 4,
-            spaceBetween: 70,
+            slidesPerView: 3,
+            spaceBetween: 50,
           },
 
           1200: {
             slidesPerView: 5,
-            spaceBetween: 80,
+            spaceBetween: 50,
           },
         }}
       >

@@ -4,7 +4,7 @@ export default function Scream ({image, title, description, clase}) {
     return (
         <>
             <div className={`mx-auto ${clase}`}>
-                <div className="d-flex justify-content-center ali">
+                <div className="d-flex align-items-center flex-column">
                     <div>
                         <Image className="image-slider" src={image} />
                     </div>

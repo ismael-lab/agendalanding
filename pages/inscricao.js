@@ -317,6 +317,7 @@ export default function Inscription() {
             <div id="flush-collapseFour" class="accordion-collapse collapse px-4" data-bs-parent="#accordionFlush">
               <p>Para habilitar seus usuários a utilizarem os controles é preciso que você os cadastre na aba de usuários nas configurações do seu ambiente e insira o usuário nos controles do espaço que você deseja que ele gerencie.</p>
             </div>
+            
           </div>
 
           

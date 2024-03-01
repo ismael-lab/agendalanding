@@ -73,8 +73,8 @@ export default function Home() {
 
   return (
     <>
-      <div className="container-banner">
-        <div><p className="header1">Para reservar espaços</p>
+      <div className="container-banner  ">
+        <div className=""><p className="header1">Para reservar espaços</p>
           <p className="text-white subtitle-header">
             Do {" "}
             <span className="text-marked">
@@ -89,7 +89,7 @@ export default function Home() {
         </div>
       </div>
 
-      <section className="container py-3 my-5">
+      <section className="container py-5 my-5">
         <div className="d-flex flex-column-reverse flex-md-row gap-5 align-items-center h-100">
           <div className="w-100">
             <div>
@@ -115,95 +115,106 @@ export default function Home() {
           <p className="subtitle">
             Por que reservar no <span><Image src={Logo} className='logo'></Image></span> ?
           </p>
-          <table className="py-5 justify-content-center title-table">
-            <tr>
-              <th><Image src={usabilidade1}></Image></th>
-              <th><Image src={Team2}></Image> </th>
-              <th><Image src={Team3}></Image></th>
-              <th><Image src={Team4}></Image> </th>
-            </tr>
-            <tr>
-              <th><p className="title-body">Cadastre-se</p></th>
-              <th><p className="title-body">Procure</p></th>
-              <th><p className="title-body">Faça a reserva</p></th>
-              <th><p className="title-body">Tudo pronto</p></th>
-            </tr>
-            <tr>
-              <th><p>na plataforma e selecione as empresas que quer reservar</p></th>
-              <th><p>o espaço que mais se adequa a seus interesses</p></th>
-              <th><p>e vá ao espaço na data selecionada previamente</p></th>
-              <th><p>agora você pode utilizar o espaço sem preocupações</p></th>
-            </tr>
-          </table>
+
+          <div className="d-grid gap-2 py-5 justify-content-center">
+            <div className="row gap-2">
+              <div className="col text-center">
+                <Image className="mb-4" src={usabilidade1}></Image>
+                <p className="title-body">Cadastre-se</p>
+                <p className="text-center">na plataforma e selecione as empresas que quer reservar</p>
+              </div>
+
+              <div className="col text-center align-self-end ">
+                <Image className="mb-4" src={Team2}></Image>
+                <p className="title-body">Procure</p>
+                <p className="text-center mx-4">o espaço que mais se adequa a seus interesses</p>
+              </div>
+              <div className="col text-center">
+                <Image className="mb-4" src={Team3}></Image>
+                <p className="title-body">Faça a reserva</p>
+                <p className="text-center mx-4">e vá ao espaço na data selecionada previamente</p>
+              </div>
+              <div className="col text-center">
+                <Image className="mb-4" src={Team4}></Image>
+                <p className="title-body">Tudo pronto</p>
+                <p className="text-center mx-4">agora você pode utilizar o espaço sem preocupações</p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
       <section className="py-5 my-5 section-cta section-cta_image">
         <div className="d-flex flex-column-reverse flex-md-row gap-5 align-items-center">
-          <div className=" px-5 w-100">
-            <div className="justify-item-center">
-              <p className="subtitle-white ">
-                Funcionalidades para você
-              </p>
+          <div className="w-100 mx-5">
+            <div className="">
+              <p className="subtitle-white">Funcionalidades para você</p>
             </div>
 
-            <div class="py-3 accordion" id="accordionExample">
-              <div class="accordion-item container-funcionalidades  ">
-                <h2 class="accordion-header" id="headingOne">
-                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
-                    <Image className="mx-2" src={iconFavorite}></Image>
-                    Salvar empresas favoritas
-                  </button>
-                </h2>
-                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample ">
-                  <div class="accordion-body">
-                    <p className="text-description">Salve na sua tela inicial as empresas que você deseja utilizar os espaços disponíveis e tenha sempre um fácil acesso a elas</p><code></code>
+            <div className="">
+              <div className="accordion accordion-flush" id="accordionFlush">
+                <div class="accordion-item d-flex flex-column">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button d-flex align-items-center justify-content-between" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                      <div class="d-flex align-items-center">
+                        <Image className="mx-2" src={iconFavorite}></Image>
+                        <p class="mb-0">Salvar empresas favoritas</p>
+                      </div>
+                    </button>
+                  </h2>
+                  <div id="flush-collapseOne" class="accordion-collapse  px-4 accordion-item-collapse" data-bs-parent="#accordionFlush">
+                    <p className="text-description px-4">Salve na sua tela inicial as empresas que você deseja utilizar os espaços disponíveis e tenha sempre um fácil acesso a elas</p>
                   </div>
                 </div>
-              </div>
-              <div class="accordion-item container-funcionalidades">
-                <h2 class="accordion-header" id="headingTwo">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                    <Image className="mx-2" src={iconSend}></Image>
-                    Enviar reserva para os convidados da reunião por e-mail
-                  </button>
-                </h2>
-                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                  <div class="accordion-body">
-                    <p className="text-description">Enquanto realiza a reserva você pode inserir o e-mail dos convidados da sua reunião. Quando finalizada a reserva eles receberão uma cópia da reserva realizada.</p><code></code>
+
+                <div class="accordion-item d-flex flex-column">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button d-flex align-items-center justify-content-between" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                      <div class="d-flex align-items-center">
+                        <Image className="mx-2" src={iconSend}></Image>
+                        <p class="mb-0">Enviar reserva para os convidados da reunião por e-mail</p>
+                      </div>
+                    </button>
+                  </h2>
+                  <div id="flush-collapseTwo" class="accordion-collapse collapse px-4" data-bs-parent="#accordionFlush">
+                    <p className="text-description px-4">Enquanto realiza a reserva você pode inserir o e-mail dos convidados da sua reunião. Quando finalizada a reserva eles receberão uma cópia da reserva realizada.</p>
                   </div>
                 </div>
-              </div>
-              <div class="accordion-item container-funcionalidades">
-                <h2 class="accordion-header" id="headingThree">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                    <Image className="mx-2" src={iconCalendar}></Image>
-                    Conferir o calendário completo do espaço
-                  </button>
-                </h2>
-                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                  <div class="accordion-body">
-                    <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code></code>,
+
+                <div class="accordion-item d-flex flex-column">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button d-flex align-items-center justify-content-between" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                      <div class="d-flex align-items-center">
+                        <Image className="mx-2" src={iconCalendar}></Image>
+                        <p class="mb-0">Conferir o calendário completo do espaço</p>
+                      </div>
+                    </button>
+                  </h2>
+                  <div id="flush-collapseThree" class="accordion-collapse collapse px-4" data-bs-parent="#accordionFlush">
+                    <p className="text-description px-4">Ao selecionar um espaço é possível ter uma visão dos horários já reservados no espaço e datas indisponíveis, permitindo uma verificação de disponibilidade sem precisar iniciar uma reserva.</p>
                   </div>
                 </div>
-              </div>
-              <div class="accordion-item container-funcionalidades">
-                <h2 class="accordion-header" id="headingFour">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                    <Image className="mx-2" src={iconReport}></Image>
-                    Reportar incidentes na sua reserva
-                  </button>
-                </h2>
-                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                  <div class="accordion-body">
-                    <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+
+                <div class="accordion-item d-flex flex-column">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button d-flex align-items-center justify-content-between" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                      <div class="d-flex align-items-center">
+                        <Image className="mx-2" src={iconReport}></Image>
+                        <p class="mb-0">Reportar incidentes na sua reserva</p>
+                      </div>
+                    </button>
+                  </h2>
+                  <div id="flush-collapseFour" class="accordion-collapse collapse px-4" data-bs-parent="#accordionFlush">
+                    <p className="text-description px-4">Algo de errado aconteceu com sua reserva? Reporte problemas nos materiais ou no espaço reservado para que a empresa possa resolver o problema.</p>
                   </div>
                 </div>
+
               </div>
             </div>
           </div>
+
           <div className="w-100 d-flex flex-row-reverse">
-            <Image src={Team5} alt="Sebrae" ></Image>
+            <Image src={Team5} alt="Sebrae" />
           </div>
         </div>
       </section>
@@ -292,7 +303,7 @@ export default function Home() {
                 <p>Como faço meu cadastro na plataforma?</p>
               </div>
             </div>
-            <div id="flush-collapseOne" class="accordion-collapse collapse px-4" data-bs-parent="#accordionFlush">
+            <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlush">
               <p >Para entrar na plataforma você só precisa clicar no botão de entrar, na parte superior do menu da página. Você será redirecionado para a tela de login e basta selecionar Fazer cadastro.</p>
             </div>
           </div>
@@ -303,7 +314,7 @@ export default function Home() {
                 <p>Preciso pagar para ter uma conta no Tahvago?</p>
               </button>
             </h2>
-            <div id="flush-collapseTwo" class="accordion-collapse collapse px-4" data-bs-parent="#accordionFlush">
+            <div id="flush-collapseTwo" class="accordion-collapse collapse " data-bs-parent="#accordionFlush">
               <p>A criação de uma conta no Tahvago é gratuita! Para utilizar nossa ferramenta você só precisa cadastrar-se clicando aqui.</p>
             </div>
           </div>
@@ -314,7 +325,7 @@ export default function Home() {
                 <p>Preciso pagar para reservar um espaço?</p>
               </button>
             </h2>
-            <div id="flush-collapseThree" class="accordion-collapse collapse px-4" data-bs-parent="#accordionFlush">
+            <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlush">
               <p>O pagamento para utilização dos espaços varia de acordo com cada empresa. Os valores são cadastrados no sistema pela empresa responsável pelo espaço e sinalizados na tela dos espaços disponíveis. </p>
             </div>
           </div>
@@ -325,7 +336,7 @@ export default function Home() {
                 <p>Como faço para reservar um espaço?</p>
               </button>
             </h2>
-            <div id="flush-collapseFour" class="accordion-collapse collapse px-4" data-bs-parent="#accordionFlush">
+            <div id="flush-collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionFlush">
               <p>Reservar um espaço é simples, você só precisa se cadastrar na ferramenta e buscar pelos ambientes mais próximos a você. Você pode colocá-los em seu acesso rápido para ter uma visualização mais ágil. Após selecionar o ambiente no qual quer reservar um espaço você navega pelos espaços disponíveis e seleciona aquele que mais se adequa às suas necessidades. Quando escolhido o espaço você só precisa informar os dados solicitados e confirmar a reserva.</p>
             </div>
           </div>
@@ -336,7 +347,7 @@ export default function Home() {
                 <p>Não consigo acessar os espaços de uma empresa específica</p>
               </button>
             </h2>
-            <div id="flush-collapseFive" class="accordion-collapse collapse px-4" data-bs-parent="#accordionFlush">
+            <div id="flush-collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionFlush">
               <p>Algumas empresas registradas no Tahvago possuem pré requisitos para acesso aos seus espaços. Quando necessário você verá um pop up pedindo alguma informação a mais para poder utilizar o ambiente escolhido. Ao enviar os dados a empresa precisará aprovar sua entrada, após aprovado uma vez você não será mais solicitado a inserir essa informação e poderá acessar direto.</p>
             </div>
           </div>
@@ -347,12 +358,12 @@ export default function Home() {
                 <p>Como faço para editar uma reserva?</p>
               </button>
             </h2>
-            <div id="flush-collapseSix" class="accordion-collapse collapse px-4" data-bs-parent="#accordionFlush">
+            <div id="flush-collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionFlush">
               <p>No momento não possuímos a função de editar uma reserva, caso precise alterar algum detalhe da sua reserva como data e hora será necessário que você cancele a reserva em “minhas reservas” e clicando na reserva em questão e realizando uma nova solicitação para aquele espaço.</p>
             </div>
           </div>
 
-          
+
         </div>
       </section>
 

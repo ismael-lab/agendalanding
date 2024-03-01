@@ -26,29 +26,29 @@ export default function SliderFlexContainer({children, clase,onSlideChange}) {
           // when window width is >= 640px
           300: {
             slidesPerView: 1,
-            spaceBetween: 30,
-            loop: false,
+            spaceBetween: 0,
+            loop: true,
             centeredSlides: true,
 
           },
           // when window width is >= 768px
           768: {
-            slidesPerView: 4,
-            spaceBetween: 50,
+            slidesPerView: 3,
+            spaceBetween: 0,
             centeredSlides: true,
-            loop: false,
+            loop: true,
           },
 
           992: {
-            slidesPerView: 5,
-            spaceBetween: 30,
+            slidesPerView: 3,
+            spaceBetween: 0,
             loop: false,
             centeredSlides: true,
           },
 
           1200: {
-            slidesPerView: 6,
-            spaceBetween: 90,
+            slidesPerView: 5,
+            spaceBetween: 0,
             loop: true,
             centeredSlides: true,
           },
